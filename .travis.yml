@@ -4,8 +4,9 @@ git:
   submodules: false
 
 script:
-  - mkdir $TRAVIS_BUILD_DIR/../gravitational
-  - ln -s . $TRAVIS_BUILD_DIR/../gravitational/teleport
+  - mkdir $TRAVIS_BUILD_DIR/../../gravitational
+  - ln -s . $TRAVIS_BUILD_DIR/../../gravitational/teleport
+  - ls -d $TRAVIS_BUILD_DIR/../../gravitational $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - make
 go:
   - "1.11.x"
