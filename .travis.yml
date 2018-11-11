@@ -8,7 +8,7 @@ script:
   - ln -s $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - ls -l $TRAVIS_BUILD_DIR/../../gravitational $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - cd $TRAVIS_BUILD_DIR/../../gravitational/teleport
-  - travis_wait 600 bash ./coverage.sh
+  - travis_wait 3600 bash ./coverage.sh
   - bash <(curl -s https://codecov.io/bash)
 go:
   - "1.11.x"
