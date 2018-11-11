@@ -9,7 +9,7 @@ script:
   - ls -l $TRAVIS_BUILD_DIR/../../gravitational $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - cd $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - make
-  - bash ./coverage.sh
+  - travis_wait 30 bash ./coverage.sh
 go:
   - "1.11.x"
   - coverage
