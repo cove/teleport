@@ -5,7 +5,7 @@ git:
 
 script:
   - mkdir $TRAVIS_BUILD_DIR/../../gravitational
-  - ln -s $TRAVIS_BUILD_DIR/../../gravitational/teleport .
+  - ln -s $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - ls -l $TRAVIS_BUILD_DIR/../../gravitational $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - make
 go:
