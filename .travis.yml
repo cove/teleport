@@ -1,5 +1,8 @@
 language: go
 
+git:
+  submodules: false
+
 script:
   - mkdir $TRAVIS_BUILD_DIR/../../gravitational
   - ln -s $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/../../gravitational/teleport
