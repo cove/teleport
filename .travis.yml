@@ -5,8 +5,9 @@ git:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install etcd
-  - sudo /etc/init.d/etcd start
+  - sudo apt-get install docker
+  - sudo /etc/init.d/docker start
+  - docker run --name etcd quay.io/coreos/etcd:v3.3.10
 
 script:
   - mkdir $TRAVIS_BUILD_DIR/../../gravitational
