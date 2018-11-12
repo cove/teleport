@@ -3,10 +3,12 @@ language: go
 git:
   submodules: false
 
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install etcd
+  - sudo /etc/init.d/etcd start
+
 script:
-  - apt install etcd
-  - systemctl enable etcd
-  - systemctl start etcd
   - mkdir $TRAVIS_BUILD_DIR/../../gravitational
   - ln -s $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/../../gravitational/teleport
   - ls -l $TRAVIS_BUILD_DIR/../../gravitational $TRAVIS_BUILD_DIR/../../gravitational/teleport
