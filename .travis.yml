@@ -17,4 +17,4 @@ script:
   - bash <(curl -s https://codecov.io/bash)
 
 go:
-  - coverage
+  - "1.11.x"
